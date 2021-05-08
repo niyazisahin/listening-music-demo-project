@@ -56,12 +56,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\Context.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminGiris.Designer.cs">
+      <DependentUpon>AdminGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ContextClass.cs" />
+    <Compile Include="Core\IManager.cs" />
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GirisEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GirisEkran.Designer.cs">
+      <DependentUpon>GirisEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForm.Designer.cs">
+      <DependentUpon>KullaniciForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciGrisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciGrisi.Designer.cs">
+      <DependentUpon>KullaniciGrisi.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202105052330338_init.cs" />
     <Compile Include="Migrations\202105052330338_init.designer.cs">
@@ -70,13 +101,28 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\CalmaListeSarkilar.cs" />
+    <Compile Include="Models\CalmaListesi.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Sanatci.cs" />
     <Compile Include="Models\Sarki.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Service\SanatciService.cs" />
+    <EmbeddedResource Include="Forms\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminGiris.resx">
+      <DependentUpon>AdminGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GirisEkran.resx">
+      <DependentUpon>GirisEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciGrisi.resx">
+      <DependentUpon>KullaniciGrisi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105052330338_init.resx">
       <DependentUpon>202105052330338_init.cs</DependentUpon>

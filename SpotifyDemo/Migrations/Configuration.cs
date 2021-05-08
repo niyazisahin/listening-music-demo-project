@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SpotifyDemo.Context.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<SpotifyDemo.Context.ContextClass>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(SpotifyDemo.Context.Context context)
+        protected override void Seed(SpotifyDemo.Context.ContextClass context)
         {
             //  This method will be called after migrating to the latest version.
 
