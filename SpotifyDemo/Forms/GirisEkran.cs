@@ -19,7 +19,7 @@ namespace SpotifyDemo
 
         private void GirisEkran_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -38,6 +38,22 @@ namespace SpotifyDemo
             kullaniciGiris.ShowDialog();
             this.Close();
 
+        }
+
+        private void pictureKullanici_Click(object sender, EventArgs e)
+        {
+            KullaniciGrisi kullaniciGiris = new KullaniciGrisi();
+            this.Hide();
+            kullaniciGiris.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureAdmin_Click(object sender, EventArgs e)
+        {
+            AdminGiris adminGiris = new AdminGiris();
+            this.Hide();
+            adminGiris.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -29,94 +29,197 @@ namespace SpotifyDemo
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminGiris));
             this.btnAdmin = new System.Windows.Forms.Button();
             this.lblAdminSifre = new System.Windows.Forms.Label();
             this.lblAdminAd = new System.Windows.Forms.Label();
             this.tbxAdminSifre = new System.Windows.Forms.TextBox();
             this.tbxAdminAd = new System.Windows.Forms.TextBox();
-            this.groupBox2.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTarih = new System.Windows.Forms.Label();
+            this.lblPingYazi = new System.Windows.Forms.Label();
+            this.lblPing = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.btnAdmin);
-            this.groupBox2.Controls.Add(this.lblAdminSifre);
-            this.groupBox2.Controls.Add(this.lblAdminAd);
-            this.groupBox2.Controls.Add(this.tbxAdminSifre);
-            this.groupBox2.Controls.Add(this.tbxAdminAd);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.Location = new System.Drawing.Point(182, 30);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(437, 390);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Admin Giriş";
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(190, 268);
+            this.btnAdmin.BackColor = System.Drawing.Color.Teal;
+            this.btnAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(140)))));
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnAdmin.Location = new System.Drawing.Point(529, 252);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(218, 37);
             this.btnAdmin.TabIndex = 4;
             this.btnAdmin.Text = "Giriş Yap";
-            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // lblAdminSifre
             // 
             this.lblAdminSifre.AutoSize = true;
-            this.lblAdminSifre.Location = new System.Drawing.Point(10, 183);
+            this.lblAdminSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdminSifre.ForeColor = System.Drawing.Color.White;
+            this.lblAdminSifre.Location = new System.Drawing.Point(374, 144);
             this.lblAdminSifre.Name = "lblAdminSifre";
-            this.lblAdminSifre.Size = new System.Drawing.Size(75, 31);
+            this.lblAdminSifre.Size = new System.Drawing.Size(52, 24);
             this.lblAdminSifre.TabIndex = 3;
             this.lblAdminSifre.Text = "Şifre";
             // 
             // lblAdminAd
             // 
             this.lblAdminAd.AutoSize = true;
-            this.lblAdminAd.Location = new System.Drawing.Point(10, 84);
+            this.lblAdminAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdminAd.ForeColor = System.Drawing.Color.White;
+            this.lblAdminAd.Location = new System.Drawing.Point(374, 57);
             this.lblAdminAd.Name = "lblAdminAd";
-            this.lblAdminAd.Size = new System.Drawing.Size(174, 31);
+            this.lblAdminAd.Size = new System.Drawing.Size(126, 24);
             this.lblAdminAd.TabIndex = 2;
             this.lblAdminAd.Text = "Kullanıcı Adı";
             // 
             // tbxAdminSifre
             // 
-            this.tbxAdminSifre.Location = new System.Drawing.Point(190, 176);
+            this.tbxAdminSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxAdminSifre.Location = new System.Drawing.Point(529, 144);
             this.tbxAdminSifre.Name = "tbxAdminSifre";
-            this.tbxAdminSifre.Size = new System.Drawing.Size(218, 38);
+            this.tbxAdminSifre.Size = new System.Drawing.Size(218, 29);
             this.tbxAdminSifre.TabIndex = 1;
             // 
             // tbxAdminAd
             // 
-            this.tbxAdminAd.Location = new System.Drawing.Point(190, 81);
+            this.tbxAdminAd.BackColor = System.Drawing.SystemColors.Window;
+            this.tbxAdminAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxAdminAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbxAdminAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.tbxAdminAd.Location = new System.Drawing.Point(529, 62);
             this.tbxAdminAd.Name = "tbxAdminAd";
-            this.tbxAdminAd.Size = new System.Drawing.Size(218, 38);
+            this.tbxAdminAd.Size = new System.Drawing.Size(218, 29);
             this.tbxAdminAd.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 487);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-50, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(888, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(182, 41);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(38, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "  Admin";
+            // 
+            // lblTarih
+            // 
+            this.lblTarih.AutoSize = true;
+            this.lblTarih.BackColor = System.Drawing.Color.Teal;
+            this.lblTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTarih.Location = new System.Drawing.Point(617, 13);
+            this.lblTarih.Name = "lblTarih";
+            this.lblTarih.Size = new System.Drawing.Size(57, 20);
+            this.lblTarih.TabIndex = 9;
+            this.lblTarih.Text = "label2";
+            // 
+            // lblPingYazi
+            // 
+            this.lblPingYazi.AutoSize = true;
+            this.lblPingYazi.BackColor = System.Drawing.Color.Teal;
+            this.lblPingYazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPingYazi.Location = new System.Drawing.Point(4, 407);
+            this.lblPingYazi.Name = "lblPingYazi";
+            this.lblPingYazi.Size = new System.Drawing.Size(111, 20);
+            this.lblPingYazi.TabIndex = 18;
+            this.lblPingYazi.Text = "Mevcut Ping :";
+            // 
+            // lblPing
+            // 
+            this.lblPing.AutoSize = true;
+            this.lblPing.BackColor = System.Drawing.Color.Teal;
+            this.lblPing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPing.Location = new System.Drawing.Point(112, 407);
+            this.lblPing.Name = "lblPing";
+            this.lblPing.Size = new System.Drawing.Size(53, 20);
+            this.lblPing.TabIndex = 17;
+            this.lblPing.Text = "label2";
             // 
             // AdminGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.lblPingYazi);
+            this.Controls.Add(this.lblPing);
+            this.Controls.Add(this.lblTarih);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.tbxAdminAd);
+            this.Controls.Add(this.tbxAdminSifre);
+            this.Controls.Add(this.btnAdmin);
+            this.Controls.Add(this.lblAdminSifre);
+            this.Controls.Add(this.lblAdminAd);
             this.Name = "AdminGiris";
             this.Text = "AdminGiris";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Load += new System.EventHandler(this.AdminGiris_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Label lblAdminSifre;
         private System.Windows.Forms.Label lblAdminAd;
         private System.Windows.Forms.TextBox tbxAdminSifre;
         private System.Windows.Forms.TextBox tbxAdminAd;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTarih;
+        private System.Windows.Forms.Label lblPingYazi;
+        private System.Windows.Forms.Label lblPing;
     }
 }

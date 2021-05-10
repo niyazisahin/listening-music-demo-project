@@ -121,6 +121,9 @@
     <EmbeddedResource Include="Forms\GirisEkran.resx">
       <DependentUpon>GirisEkran.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForm.resx">
+      <DependentUpon>KullaniciForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciGrisi.resx">
       <DependentUpon>KullaniciGrisi.cs</DependentUpon>
     </EmbeddedResource>

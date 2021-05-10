@@ -97,6 +97,7 @@ namespace SpotifyDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbxSanatciID);
             this.Controls.Add(this.btnSanatciGuncelle);
@@ -107,6 +108,7 @@ namespace SpotifyDemo
             this.Controls.Add(this.tbxSarkiciAd);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

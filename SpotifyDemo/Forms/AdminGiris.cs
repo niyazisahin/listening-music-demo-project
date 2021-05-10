@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,6 +39,17 @@ namespace SpotifyDemo
                     }
                 }
             }
+        }
+
+        private void AdminGiris_Load(object sender, EventArgs e)
+        {
+            var tarih = DateTime.Now;
+            lblTarih.Text = tarih.ToString();
+
+            Ping p = new Ping();
+           
+            PingReply rep = p.Send("www.google.com");
+            lblPing.Text = (rep.RoundtripTime.ToString());
         }
     }
 }

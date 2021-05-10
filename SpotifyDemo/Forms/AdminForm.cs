@@ -41,5 +41,10 @@ namespace SpotifyDemo
 
             sanatciService.Update(Int32.Parse(tbxSanatciID.Text), sanatci);
         }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
