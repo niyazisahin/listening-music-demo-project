@@ -9,7 +9,7 @@ namespace SpotifyDemo.Models
     class CalmaListesi
     {
         public int CalmaListesiID { get; set; }
-        public Kullanici KullaniciID { get; set; }
+        public int KullaniciID { get; set; }
         public string ListeAd { get; set; }
     }
 }

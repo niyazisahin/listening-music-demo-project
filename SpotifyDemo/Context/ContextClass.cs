@@ -17,5 +17,6 @@ namespace SpotifyDemo.Context
         public DbSet<Album> Albums { get; set; }
         public DbSet<CalmaListesi> CalmaListesis { get; set; }
         public DbSet<CalmaListeSarkilar> CalmaListesiSarkilars { get; set; }
+        public DbSet<SarkiSanatcilar> SarkiSanatcilars { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SpotifyDemo.Context;
+using SpotifyDemo.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,11 @@ using System.Windows.Forms;
 
 namespace SpotifyDemo
 {
-    public partial class KullaniciGrisi : Form
+    public partial class KullaniciGiris : Form
     {
         ContextClass context = new ContextClass();
-        public KullaniciGrisi()
+        Ping p = new Ping();
+        public KullaniciGiris()
         {
 
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace SpotifyDemo
             var tarih = DateTime.Now;
             lblTarih.Text = tarih.ToString();
 
-            Ping p = new Ping();
+            
             PingReply rep = p.Send("www.google.com");
             lblPing.Text = (rep.RoundtripTime.ToString());
         }
@@ -66,7 +68,16 @@ namespace SpotifyDemo
 
         private void lblPing_Click(object sender, EventArgs e)
         {
+            PingReply rep = p.Send("www.google.com");
+            lblPing.Text = (rep.RoundtripTime.ToString());
+        }
 
+        private void btnGirisDon_Click(object sender, EventArgs e)
+        {
+            GirisEkran girisEkran = new GirisEkran();
+            this.Hide();
+            girisEkran.ShowDialog();
+            this.Close();
         }
     }
 }

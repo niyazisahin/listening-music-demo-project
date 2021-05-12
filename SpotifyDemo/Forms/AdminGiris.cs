@@ -1,4 +1,5 @@
 ﻿using SpotifyDemo.Context;
+using SpotifyDemo.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace SpotifyDemo
     public partial class AdminGiris : Form
     {
         ContextClass context = new ContextClass();
+        Ping p = new Ping();
         public AdminGiris()
         {
             InitializeComponent();
@@ -32,9 +34,9 @@ namespace SpotifyDemo
                     if (item.AdminSifre == sifre)
                     {
                         Console.WriteLine("Admin Giris Basarili");
-                        AdminForm adminForm = new AdminForm();
+                        AdminAnasayfa adminAnasayfa = new AdminAnasayfa();
                         this.Hide();
-                        adminForm.ShowDialog();
+                        adminAnasayfa.ShowDialog();
                         this.Close();
                     }
                 }
@@ -45,11 +47,48 @@ namespace SpotifyDemo
         {
             var tarih = DateTime.Now;
             lblTarih.Text = tarih.ToString();
-
-            Ping p = new Ping();
            
             PingReply rep = p.Send("www.google.com");
             lblPing.Text = (rep.RoundtripTime.ToString());
+        }
+
+        private void btnGirisDon_Click(object sender, EventArgs e)
+        {
+            GirisEkran girisEkran = new GirisEkran();
+            this.Hide();
+            girisEkran.ShowDialog();
+            this.Close();
+        }
+
+        private void lblPing_Click(object sender, EventArgs e)
+        {
+            PingReply rep = p.Send("www.google.com");
+            lblPing.Text = (rep.RoundtripTime.ToString());
+        }
+
+        private void lblPingYazi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -56,6 +56,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminAlbumEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminAlbumEkle.Designer.cs">
+      <DependentUpon>AdminAlbumEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminAlbumGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminAlbumGuncelle.Designer.cs">
+      <DependentUpon>AdminAlbumGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminAnasayfa.Designer.cs">
+      <DependentUpon>AdminAnasayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +88,30 @@
     </Compile>
     <Compile Include="Context\ContextClass.cs" />
     <Compile Include="Core\IManager.cs" />
+    <Compile Include="Forms\AdminSanatciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminSanatciEkle.Designer.cs">
+      <DependentUpon>AdminSanatciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminSanatciGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminSanatciGuncelle.Designer.cs">
+      <DependentUpon>AdminSanatciGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminSarkiEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminSarkiEkle.Designer.cs">
+      <DependentUpon>AdminSarkiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminSarkiGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminSarkiGuncelleme.Designer.cs">
+      <DependentUpon>AdminSarkiGuncelleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,15 +130,11 @@
     <Compile Include="Forms\KullaniciForm.Designer.cs">
       <DependentUpon>KullaniciForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\KullaniciGrisi.cs">
+    <Compile Include="Forms\KullaniciGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\KullaniciGrisi.Designer.cs">
-      <DependentUpon>KullaniciGrisi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105052330338_init.cs" />
-    <Compile Include="Migrations\202105052330338_init.designer.cs">
-      <DependentUpon>202105052330338_init.cs</DependentUpon>
+    <Compile Include="Forms\KullaniciGiris.Designer.cs">
+      <DependentUpon>KullaniciGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -106,14 +144,38 @@
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Sanatci.cs" />
     <Compile Include="Models\Sarki.cs" />
+    <Compile Include="Models\SarkiSanatcilar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AlbumService.cs" />
     <Compile Include="Service\SanatciService.cs" />
+    <Compile Include="Service\SarkiService.cs" />
+    <EmbeddedResource Include="Forms\AdminAlbumEkle.resx">
+      <DependentUpon>AdminAlbumEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminAlbumGuncelle.resx">
+      <DependentUpon>AdminAlbumGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminAnasayfa.resx">
+      <DependentUpon>AdminAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminGiris.resx">
       <DependentUpon>AdminGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminSanatciEkle.resx">
+      <DependentUpon>AdminSanatciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminSanatciGuncelle.resx">
+      <DependentUpon>AdminSanatciGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminSarkiEkle.resx">
+      <DependentUpon>AdminSarkiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminSarkiGuncelleme.resx">
+      <DependentUpon>AdminSarkiGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -124,11 +186,8 @@
     <EmbeddedResource Include="Forms\KullaniciForm.resx">
       <DependentUpon>KullaniciForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\KullaniciGrisi.resx">
-      <DependentUpon>KullaniciGrisi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105052330338_init.resx">
-      <DependentUpon>202105052330338_init.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\KullaniciGiris.resx">
+      <DependentUpon>KullaniciGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,6 +211,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="TextFile\Log.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

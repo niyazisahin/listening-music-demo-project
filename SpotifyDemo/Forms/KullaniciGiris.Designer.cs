@@ -1,7 +1,9 @@
 ﻿
+using SpotifyDemo.Forms;
+
 namespace SpotifyDemo
 {
-    partial class KullaniciGrisi
+    partial class KullaniciGiris
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +31,7 @@ namespace SpotifyDemo
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullaniciGrisi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullaniciGiris));
             this.tbxKullaniciAd = new System.Windows.Forms.TextBox();
             this.tbxKullaniciSifre = new System.Windows.Forms.TextBox();
             this.btnKullanici = new System.Windows.Forms.Button();
@@ -42,6 +44,7 @@ namespace SpotifyDemo
             this.lblTarih = new System.Windows.Forms.Label();
             this.lblPing = new System.Windows.Forms.Label();
             this.lblPingYazi = new System.Windows.Forms.Label();
+            this.btnGirisDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +72,7 @@ namespace SpotifyDemo
             // btnKullanici
             // 
             this.btnKullanici.BackColor = System.Drawing.Color.Teal;
+            this.btnKullanici.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKullanici.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnKullanici.FlatAppearance.BorderSize = 0;
             this.btnKullanici.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -181,12 +185,29 @@ namespace SpotifyDemo
             this.lblPingYazi.TabIndex = 16;
             this.lblPingYazi.Text = "Mevcut Ping :";
             // 
-            // KullaniciGrisi
+            // btnGirisDon
+            // 
+            this.btnGirisDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnGirisDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGirisDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnGirisDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGirisDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisDon.ForeColor = System.Drawing.Color.White;
+            this.btnGirisDon.Location = new System.Drawing.Point(-1, 309);
+            this.btnGirisDon.Name = "btnGirisDon";
+            this.btnGirisDon.Size = new System.Drawing.Size(182, 41);
+            this.btnGirisDon.TabIndex = 20;
+            this.btnGirisDon.Text = "Giriş Ekran";
+            this.btnGirisDon.UseVisualStyleBackColor = false;
+            this.btnGirisDon.Click += new System.EventHandler(this.btnGirisDon_Click);
+            // 
+            // KullaniciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGirisDon);
             this.Controls.Add(this.lblPingYazi);
             this.Controls.Add(this.lblPing);
             this.Controls.Add(this.lblTarih);
@@ -199,8 +220,8 @@ namespace SpotifyDemo
             this.Controls.Add(this.btnKullanici);
             this.Controls.Add(this.lblKullaniciSifre);
             this.Controls.Add(this.lblKullaniciAd);
-            this.Name = "KullaniciGrisi";
-            this.Text = "KullaniciGrisi";
+            this.Name = "KullaniciForm";
+            this.Text = "KullaniciForm";
             this.Load += new System.EventHandler(this.KullaniciGrisi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -223,5 +244,6 @@ namespace SpotifyDemo
         private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.Label lblPing;
         private System.Windows.Forms.Label lblPingYazi;
+        private System.Windows.Forms.Button btnGirisDon;
     }
 }

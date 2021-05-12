@@ -11,10 +11,10 @@ namespace SpotifyDemo.Models
         public virtual int SarkiID { get; set; }
         public string SarkiAd { get; set; }
         public DateTime SarkiTarih { get; set; }
-        public virtual Album SarkiAlbum { get; set; }
-        //public ICollection<Sanatci> SarkiSanatci { get; set; }
         public string SarkiTur { get; set; }
-        public float SarkiSure { get; set; }
+        public int SarkiSure { get; set; }
         public int SarkiDinlenmeSayisi { get; set; }
+        public int AlbumID { get; set; }
+        
     }
 }

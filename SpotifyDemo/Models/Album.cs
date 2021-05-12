@@ -10,8 +10,8 @@ namespace SpotifyDemo.Models
     {
         public int AlbumID { get; set; }
         public string AlbumAd { get; set; }
-        public   Sanatci AlbumSanatci { get; set; }
-        public  ICollection<Sarki> AlbumSarki { get; set; }
+        public int  AlbumSanatciID { get; set; }
+        
         
 
 

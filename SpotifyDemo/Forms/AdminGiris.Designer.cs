@@ -42,6 +42,7 @@ namespace SpotifyDemo
             this.lblTarih = new System.Windows.Forms.Label();
             this.lblPingYazi = new System.Windows.Forms.Label();
             this.lblPing = new System.Windows.Forms.Label();
+            this.btnGirisDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -50,6 +51,7 @@ namespace SpotifyDemo
             // btnAdmin
             // 
             this.btnAdmin.BackColor = System.Drawing.Color.Teal;
+            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -116,6 +118,7 @@ namespace SpotifyDemo
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -126,6 +129,7 @@ namespace SpotifyDemo
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -134,6 +138,7 @@ namespace SpotifyDemo
             this.pictureBox3.Size = new System.Drawing.Size(182, 41);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label1
             // 
@@ -145,6 +150,7 @@ namespace SpotifyDemo
             this.label1.Size = new System.Drawing.Size(91, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "  Admin";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblTarih
             // 
@@ -167,6 +173,7 @@ namespace SpotifyDemo
             this.lblPingYazi.Size = new System.Drawing.Size(111, 20);
             this.lblPingYazi.TabIndex = 18;
             this.lblPingYazi.Text = "Mevcut Ping :";
+            this.lblPingYazi.Click += new System.EventHandler(this.lblPingYazi_Click);
             // 
             // lblPing
             // 
@@ -178,13 +185,31 @@ namespace SpotifyDemo
             this.lblPing.Size = new System.Drawing.Size(53, 20);
             this.lblPing.TabIndex = 17;
             this.lblPing.Text = "label2";
+            this.lblPing.Click += new System.EventHandler(this.lblPing_Click);
+            // 
+            // btnGirisDon
+            // 
+            this.btnGirisDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnGirisDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGirisDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnGirisDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGirisDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisDon.ForeColor = System.Drawing.Color.White;
+            this.btnGirisDon.Location = new System.Drawing.Point(0, 322);
+            this.btnGirisDon.Name = "btnGirisDon";
+            this.btnGirisDon.Size = new System.Drawing.Size(182, 41);
+            this.btnGirisDon.TabIndex = 21;
+            this.btnGirisDon.Text = "Giriş Ekran";
+            this.btnGirisDon.UseVisualStyleBackColor = false;
+            this.btnGirisDon.Click += new System.EventHandler(this.btnGirisDon_Click);
             // 
             // AdminGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(813, 463);
+            this.Controls.Add(this.btnGirisDon);
             this.Controls.Add(this.lblPingYazi);
             this.Controls.Add(this.lblPing);
             this.Controls.Add(this.lblTarih);
@@ -221,5 +246,6 @@ namespace SpotifyDemo
         private System.Windows.Forms.Label lblTarih;
         private System.Windows.Forms.Label lblPingYazi;
         private System.Windows.Forms.Label lblPing;
+        private System.Windows.Forms.Button btnGirisDon;
     }
 }

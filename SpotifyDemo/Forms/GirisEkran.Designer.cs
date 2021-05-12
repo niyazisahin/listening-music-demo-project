@@ -34,6 +34,7 @@ namespace SpotifyDemo
             this.btnAdmin = new System.Windows.Forms.Button();
             this.pictureAdmin = new System.Windows.Forms.PictureBox();
             this.pictureKullanici = new System.Windows.Forms.PictureBox();
+            this.btnCikis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureKullanici)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@ namespace SpotifyDemo
             // 
             // pictureAdmin
             // 
+            this.pictureAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureAdmin.Image")));
             this.pictureAdmin.Location = new System.Drawing.Point(170, 132);
             this.pictureAdmin.Name = "pictureAdmin";
@@ -74,7 +76,7 @@ namespace SpotifyDemo
             // 
             // pictureKullanici
             // 
-            this.pictureKullanici.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureKullanici.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureKullanici.Image = ((System.Drawing.Image)(resources.GetObject("pictureKullanici.Image")));
             this.pictureKullanici.Location = new System.Drawing.Point(449, 132);
             this.pictureKullanici.Name = "pictureKullanici";
@@ -84,6 +86,22 @@ namespace SpotifyDemo
             this.pictureKullanici.TabStop = false;
             this.pictureKullanici.Click += new System.EventHandler(this.pictureKullanici_Click);
             // 
+            // btnCikis
+            // 
+            this.btnCikis.BackColor = System.Drawing.Color.Teal;
+            this.btnCikis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCikis.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCikis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnCikis.Location = new System.Drawing.Point(336, 432);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(152, 35);
+            this.btnCikis.TabIndex = 4;
+            this.btnCikis.Text = "Çıkış";
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            // 
             // GirisEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +109,7 @@ namespace SpotifyDemo
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(844, 479);
+            this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.pictureKullanici);
             this.Controls.Add(this.pictureAdmin);
             this.Controls.Add(this.btnAdmin);
@@ -111,5 +130,6 @@ namespace SpotifyDemo
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.PictureBox pictureAdmin;
         private System.Windows.Forms.PictureBox pictureKullanici;
+        private System.Windows.Forms.Button btnCikis;
     }
 }

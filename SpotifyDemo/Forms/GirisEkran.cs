@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SpotifyDemo.Context;
+using SpotifyDemo.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace SpotifyDemo
 {
     public partial class GirisEkran : Form
     {
+        ContextClass context = new ContextClass();
         public GirisEkran()
         {
             InitializeComponent();
@@ -33,7 +36,7 @@ namespace SpotifyDemo
 
         private void btnKullanici_Click(object sender, EventArgs e)
         {
-            KullaniciGrisi kullaniciGiris = new KullaniciGrisi();
+            KullaniciGiris kullaniciGiris = new KullaniciGiris();
             this.Hide();
             kullaniciGiris.ShowDialog();
             this.Close();
@@ -42,7 +45,7 @@ namespace SpotifyDemo
 
         private void pictureKullanici_Click(object sender, EventArgs e)
         {
-            KullaniciGrisi kullaniciGiris = new KullaniciGrisi();
+            KullaniciGiris kullaniciGiris = new KullaniciGiris();
             this.Hide();
             kullaniciGiris.ShowDialog();
             this.Close();
@@ -54,6 +57,11 @@ namespace SpotifyDemo
             this.Hide();
             adminGiris.ShowDialog();
             this.Close();
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

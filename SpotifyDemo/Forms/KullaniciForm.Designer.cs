@@ -1,5 +1,5 @@
 ﻿
-namespace SpotifyDemo
+namespace SpotifyDemo.Forms
 {
     partial class KullaniciForm
     {
@@ -39,6 +39,7 @@ namespace SpotifyDemo
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "KullaniciForm";
             this.Text = "KullaniciForm";
+            this.Load += new System.EventHandler(this.KullaniciForm_Load);
             this.ResumeLayout(false);
 
         }
