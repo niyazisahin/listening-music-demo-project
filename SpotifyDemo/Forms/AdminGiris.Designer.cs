@@ -59,7 +59,7 @@ namespace SpotifyDemo
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnAdmin.Location = new System.Drawing.Point(529, 252);
+            this.btnAdmin.Location = new System.Drawing.Point(597, 314);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(218, 37);
             this.btnAdmin.TabIndex = 4;
@@ -72,7 +72,7 @@ namespace SpotifyDemo
             this.lblAdminSifre.AutoSize = true;
             this.lblAdminSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAdminSifre.ForeColor = System.Drawing.Color.White;
-            this.lblAdminSifre.Location = new System.Drawing.Point(374, 144);
+            this.lblAdminSifre.Location = new System.Drawing.Point(442, 206);
             this.lblAdminSifre.Name = "lblAdminSifre";
             this.lblAdminSifre.Size = new System.Drawing.Size(52, 24);
             this.lblAdminSifre.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace SpotifyDemo
             this.lblAdminAd.AutoSize = true;
             this.lblAdminAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAdminAd.ForeColor = System.Drawing.Color.White;
-            this.lblAdminAd.Location = new System.Drawing.Point(374, 57);
+            this.lblAdminAd.Location = new System.Drawing.Point(442, 119);
             this.lblAdminAd.Name = "lblAdminAd";
             this.lblAdminAd.Size = new System.Drawing.Size(126, 24);
             this.lblAdminAd.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace SpotifyDemo
             // tbxAdminSifre
             // 
             this.tbxAdminSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxAdminSifre.Location = new System.Drawing.Point(529, 144);
+            this.tbxAdminSifre.Location = new System.Drawing.Point(597, 206);
             this.tbxAdminSifre.Name = "tbxAdminSifre";
             this.tbxAdminSifre.Size = new System.Drawing.Size(218, 29);
             this.tbxAdminSifre.TabIndex = 1;
@@ -103,7 +103,7 @@ namespace SpotifyDemo
             this.tbxAdminAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxAdminAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbxAdminAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.tbxAdminAd.Location = new System.Drawing.Point(529, 62);
+            this.tbxAdminAd.Location = new System.Drawing.Point(597, 124);
             this.tbxAdminAd.Name = "tbxAdminAd";
             this.tbxAdminAd.Size = new System.Drawing.Size(218, 29);
             this.tbxAdminAd.TabIndex = 0;
@@ -114,7 +114,7 @@ namespace SpotifyDemo
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 487);
+            this.pictureBox1.Size = new System.Drawing.Size(182, 614);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -125,7 +125,7 @@ namespace SpotifyDemo
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(-50, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(888, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(1072, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -208,7 +208,7 @@ namespace SpotifyDemo
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(813, 463);
+            this.ClientSize = new System.Drawing.Size(911, 538);
             this.Controls.Add(this.btnGirisDon);
             this.Controls.Add(this.lblPingYazi);
             this.Controls.Add(this.lblPing);

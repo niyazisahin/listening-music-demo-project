@@ -45,6 +45,8 @@ namespace SpotifyDemo
             Console.WriteLine(mail);
             Console.WriteLine(sifre);
 
+            bool sayac = false;
+
             foreach (var item in context.Kullanicis)
             {
                 if (item.KullaniciAd == mail)
@@ -52,12 +54,18 @@ namespace SpotifyDemo
                     if (item.KullaniciSifre == sifre)
                     {
                         Console.WriteLine("Kullanici Giris Basarili");
-                        KullaniciForm kullaniciForm = new KullaniciForm();
+                        KullaniciForm kullaniciForm = new KullaniciForm(item.KullaniciID);
                         this.Hide();
                         kullaniciForm.ShowDialog();
                         this.Close();
+
+                        sayac = true;
                     }
                 }
+            }
+            if (!sayac)
+            {
+                MessageBox.Show("Girilen Bilgiler Hatalıdır!");
             }
         }
 
@@ -77,6 +85,14 @@ namespace SpotifyDemo
             GirisEkran girisEkran = new GirisEkran();
             this.Hide();
             girisEkran.ShowDialog();
+            this.Close();
+        }
+
+        private void btnKayıtOl_Click(object sender, EventArgs e)
+        {
+            KullaniciKayit kullaniciKayit = new KullaniciKayit();
+            this.Hide();
+            kullaniciKayit.ShowDialog();
             this.Close();
         }
     }

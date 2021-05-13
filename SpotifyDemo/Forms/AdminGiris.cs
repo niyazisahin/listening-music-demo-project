@@ -39,6 +39,14 @@ namespace SpotifyDemo
                         adminAnasayfa.ShowDialog();
                         this.Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("Girilen Bilgiler Hatalıdır!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Girilen Bilgiler Hatalıdır!");
                 }
             }
         }

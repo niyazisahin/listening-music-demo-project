@@ -45,6 +45,7 @@ namespace SpotifyDemo
             this.lblPing = new System.Windows.Forms.Label();
             this.lblPingYazi = new System.Windows.Forms.Label();
             this.btnGirisDon = new System.Windows.Forms.Button();
+            this.btnKayıtOl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +57,7 @@ namespace SpotifyDemo
             this.tbxKullaniciAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxKullaniciAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tbxKullaniciAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.tbxKullaniciAd.Location = new System.Drawing.Point(528, 62);
+            this.tbxKullaniciAd.Location = new System.Drawing.Point(616, 109);
             this.tbxKullaniciAd.Name = "tbxKullaniciAd";
             this.tbxKullaniciAd.Size = new System.Drawing.Size(218, 29);
             this.tbxKullaniciAd.TabIndex = 5;
@@ -64,7 +65,7 @@ namespace SpotifyDemo
             // tbxKullaniciSifre
             // 
             this.tbxKullaniciSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxKullaniciSifre.Location = new System.Drawing.Point(528, 144);
+            this.tbxKullaniciSifre.Location = new System.Drawing.Point(616, 191);
             this.tbxKullaniciSifre.Name = "tbxKullaniciSifre";
             this.tbxKullaniciSifre.Size = new System.Drawing.Size(218, 29);
             this.tbxKullaniciSifre.TabIndex = 6;
@@ -80,7 +81,7 @@ namespace SpotifyDemo
             this.btnKullanici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKullanici.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnKullanici.Location = new System.Drawing.Point(528, 252);
+            this.btnKullanici.Location = new System.Drawing.Point(616, 299);
             this.btnKullanici.Name = "btnKullanici";
             this.btnKullanici.Size = new System.Drawing.Size(218, 37);
             this.btnKullanici.TabIndex = 9;
@@ -93,7 +94,7 @@ namespace SpotifyDemo
             this.lblKullaniciSifre.AutoSize = true;
             this.lblKullaniciSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKullaniciSifre.ForeColor = System.Drawing.Color.White;
-            this.lblKullaniciSifre.Location = new System.Drawing.Point(373, 144);
+            this.lblKullaniciSifre.Location = new System.Drawing.Point(461, 191);
             this.lblKullaniciSifre.Name = "lblKullaniciSifre";
             this.lblKullaniciSifre.Size = new System.Drawing.Size(52, 24);
             this.lblKullaniciSifre.TabIndex = 8;
@@ -104,7 +105,7 @@ namespace SpotifyDemo
             this.lblKullaniciAd.AutoSize = true;
             this.lblKullaniciAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKullaniciAd.ForeColor = System.Drawing.Color.White;
-            this.lblKullaniciAd.Location = new System.Drawing.Point(373, 57);
+            this.lblKullaniciAd.Location = new System.Drawing.Point(461, 104);
             this.lblKullaniciAd.Name = "lblKullaniciAd";
             this.lblKullaniciAd.Size = new System.Drawing.Size(126, 24);
             this.lblKullaniciAd.TabIndex = 7;
@@ -135,7 +136,7 @@ namespace SpotifyDemo
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(888, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(1078, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -146,7 +147,7 @@ namespace SpotifyDemo
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 487);
+            this.pictureBox1.Size = new System.Drawing.Size(182, 609);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -201,12 +202,32 @@ namespace SpotifyDemo
             this.btnGirisDon.UseVisualStyleBackColor = false;
             this.btnGirisDon.Click += new System.EventHandler(this.btnGirisDon_Click);
             // 
-            // KullaniciForm
+            // btnKayıtOl
+            // 
+            this.btnKayıtOl.BackColor = System.Drawing.Color.Teal;
+            this.btnKayıtOl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKayıtOl.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnKayıtOl.FlatAppearance.BorderSize = 0;
+            this.btnKayıtOl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnKayıtOl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(140)))));
+            this.btnKayıtOl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKayıtOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKayıtOl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnKayıtOl.Location = new System.Drawing.Point(616, 374);
+            this.btnKayıtOl.Name = "btnKayıtOl";
+            this.btnKayıtOl.Size = new System.Drawing.Size(218, 37);
+            this.btnKayıtOl.TabIndex = 21;
+            this.btnKayıtOl.Text = "Kayıt Ol";
+            this.btnKayıtOl.UseVisualStyleBackColor = false;
+            this.btnKayıtOl.Click += new System.EventHandler(this.btnKayıtOl_Click);
+            // 
+            // KullaniciGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(916, 536);
+            this.Controls.Add(this.btnKayıtOl);
             this.Controls.Add(this.btnGirisDon);
             this.Controls.Add(this.lblPingYazi);
             this.Controls.Add(this.lblPing);
@@ -220,7 +241,7 @@ namespace SpotifyDemo
             this.Controls.Add(this.btnKullanici);
             this.Controls.Add(this.lblKullaniciSifre);
             this.Controls.Add(this.lblKullaniciAd);
-            this.Name = "KullaniciForm";
+            this.Name = "KullaniciGiris";
             this.Text = "KullaniciForm";
             this.Load += new System.EventHandler(this.KullaniciGrisi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -245,5 +266,6 @@ namespace SpotifyDemo
         private System.Windows.Forms.Label lblPing;
         private System.Windows.Forms.Label lblPingYazi;
         private System.Windows.Forms.Button btnGirisDon;
+        private System.Windows.Forms.Button btnKayıtOl;
     }
 }

@@ -30,8 +30,6 @@ namespace SpotifyDemo
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisEkran));
-            this.btnKullanici = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.pictureAdmin = new System.Windows.Forms.PictureBox();
             this.pictureKullanici = new System.Windows.Forms.PictureBox();
             this.btnCikis = new System.Windows.Forms.Button();
@@ -39,34 +37,11 @@ namespace SpotifyDemo
             ((System.ComponentModel.ISupportInitialize)(this.pictureKullanici)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnKullanici
-            // 
-            this.btnKullanici.BackColor = System.Drawing.Color.White;
-            this.btnKullanici.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnKullanici.FlatAppearance.BorderSize = 0;
-            this.btnKullanici.Location = new System.Drawing.Point(449, 26);
-            this.btnKullanici.Name = "btnKullanici";
-            this.btnKullanici.Size = new System.Drawing.Size(212, 77);
-            this.btnKullanici.TabIndex = 0;
-            this.btnKullanici.Text = "Kullanıcı Giriş";
-            this.btnKullanici.UseVisualStyleBackColor = false;
-            this.btnKullanici.Click += new System.EventHandler(this.btnKullanici_Click);
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(170, 26);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(212, 77);
-            this.btnAdmin.TabIndex = 1;
-            this.btnAdmin.Text = "Admin Giriş";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
             // pictureAdmin
             // 
             this.pictureAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureAdmin.Image")));
-            this.pictureAdmin.Location = new System.Drawing.Point(170, 132);
+            this.pictureAdmin.Location = new System.Drawing.Point(173, 87);
             this.pictureAdmin.Name = "pictureAdmin";
             this.pictureAdmin.Size = new System.Drawing.Size(212, 279);
             this.pictureAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -78,7 +53,7 @@ namespace SpotifyDemo
             // 
             this.pictureKullanici.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureKullanici.Image = ((System.Drawing.Image)(resources.GetObject("pictureKullanici.Image")));
-            this.pictureKullanici.Location = new System.Drawing.Point(449, 132);
+            this.pictureKullanici.Location = new System.Drawing.Point(452, 87);
             this.pictureKullanici.Name = "pictureKullanici";
             this.pictureKullanici.Size = new System.Drawing.Size(212, 279);
             this.pictureKullanici.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,8 +87,6 @@ namespace SpotifyDemo
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.pictureKullanici);
             this.Controls.Add(this.pictureAdmin);
-            this.Controls.Add(this.btnAdmin);
-            this.Controls.Add(this.btnKullanici);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GirisEkran";
             this.Text = "GirisEkran";
@@ -125,9 +98,6 @@ namespace SpotifyDemo
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnKullanici;
-        private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.PictureBox pictureAdmin;
         private System.Windows.Forms.PictureBox pictureKullanici;
         private System.Windows.Forms.Button btnCikis;
