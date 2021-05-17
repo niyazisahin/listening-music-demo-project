@@ -36,9 +36,7 @@ namespace SpotifyDemo.Service
             var album = GetByID(id);
 
             album.AlbumAd = entity.AlbumAd;
-            album.AlbumSanatciID = entity.AlbumSanatciID;
             
-
             context.SaveChanges();
 
 

@@ -17,10 +17,10 @@ namespace SpotifyDemo.Forms
     public partial class AdminAlbumEkle : Form
     {
 
-        Ping p = new Ping();
         ContextClass context = new ContextClass();
         AlbumService albumService = new AlbumService();
         SanatciService sanatciService = new SanatciService();
+        AlbumSanatciListeService albumSanatciListeService = new AlbumSanatciListeService();
 
         public AdminAlbumEkle()
         {
@@ -35,47 +35,55 @@ namespace SpotifyDemo.Forms
             this.Close();
         }
 
-        private void lblPing_Click(object sender, EventArgs e)
-        {
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
-        }
-
-        private void lblPingYazi_Click(object sender, EventArgs e)
-        {
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
-        }
-
         private void btnSanatciEkle_Click(object sender, EventArgs e)
         {
-            Album album = new Album();
-            album.AlbumAd = tbxAlbumAd.Text;
-
-            var sanatciId = context.Sanatcis.Where(x => x.SanatciAd == cmbbxAlbumSanatci.SelectedItem.ToString()).Select(y => y.SanatciID).FirstOrDefault();
-
-            Console.WriteLine(sanatciId);
-
-            album.AlbumSanatciID = sanatciId;
-
-            try
+            if (checkedListBox1.CheckedItems.Count != 0)
             {
-                albumService.Add(album);
+                    Album album = new Album();
+                    album.AlbumAd = tbxAlbumAd.Text;
+
+
+                    try
+                    {
+                        albumService.Add(album);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Album Eklenemedi");
+                    }
+                    MessageBox.Show("Album Eklendi");
+
+                var albumBul = context.Albums.Where(x => x.AlbumAd == tbxAlbumAd.Text).FirstOrDefault();
+                var albumId = albumBul.AlbumID;
+
+                var sanatcilar = checkedListBox1.CheckedItems;
+                foreach (var item in sanatcilar)
+                {
+                    AlbumSanatciListe albumSanatciListe = new AlbumSanatciListe();
+                    var sanatci = context.Sanatcis.Where(x => x.SanatciAd == item.ToString()).FirstOrDefault();
+                    var sanatciId = sanatci.SanatciID;
+
+                    albumSanatciListe.AlbumID = albumId;
+                    albumSanatciListe.SanatciID = sanatciId;
+
+                    albumSanatciListeService.Add(albumSanatciListe);
+                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Album Eklenemedi");
+                MessageBox.Show("En Az 1 Sanatci Secmelisiniz.");
             }
-            MessageBox.Show("Album Eklendi");
+
+               
         }
 
         private void AdminAlbumEkle_Load(object sender, EventArgs e)
         {
             var sanatcilar = context.Sanatcis;
 
-            foreach (var s in sanatcilar)
+            foreach (var item in sanatcilar)
             {
-                cmbbxAlbumSanatci.Items.Add(s.SanatciAd);
+                checkedListBox1.Items.Add(item.SanatciAd);
             }
         }
     }

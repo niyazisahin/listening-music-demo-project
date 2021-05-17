@@ -59,7 +59,7 @@ namespace SpotifyDemo.Forms
             this.btnAlbumSil = new System.Windows.Forms.Button();
             this.btnAlbumGuncelle = new System.Windows.Forms.Button();
             this.btnAlbumEkle = new System.Windows.Forms.Button();
-            this.btnYenile = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             radioButton1 = new System.Windows.Forms.RadioButton();
             radioButton2 = new System.Windows.Forms.RadioButton();
             radioButton3 = new System.Windows.Forms.RadioButton();
@@ -265,6 +265,8 @@ namespace SpotifyDemo.Forms
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
@@ -454,21 +456,22 @@ namespace SpotifyDemo.Forms
             this.btnAlbumEkle.UseVisualStyleBackColor = false;
             this.btnAlbumEkle.Click += new System.EventHandler(this.btnAlbumEkle_Click);
             // 
-            // btnYenile
+            // button1
             // 
-            this.btnYenile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.btnYenile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnYenile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.btnYenile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYenile.ForeColor = System.Drawing.Color.White;
-            this.btnYenile.Location = new System.Drawing.Point(728, -1);
-            this.btnYenile.Name = "btnYenile";
-            this.btnYenile.Size = new System.Drawing.Size(182, 41);
-            this.btnYenile.TabIndex = 39;
-            this.btnYenile.Text = "Sayfayı Yenile";
-            this.btnYenile.UseVisualStyleBackColor = false;
-            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
+            this.button1.BackColor = System.Drawing.Color.DarkRed;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(850, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 41);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AdminAnasayfa
             // 
@@ -476,6 +479,7 @@ namespace SpotifyDemo.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(910, 548);
+            this.Controls.Add(this.button1);
             this.Controls.Add(radioButton7);
             this.Controls.Add(radioButton8);
             this.Controls.Add(radioButton9);
@@ -485,7 +489,6 @@ namespace SpotifyDemo.Forms
             this.Controls.Add(radioButton3);
             this.Controls.Add(radioButton2);
             this.Controls.Add(radioButton1);
-            this.Controls.Add(this.btnYenile);
             this.Controls.Add(this.btnAlbumSil);
             this.Controls.Add(this.btnAlbumGuncelle);
             this.Controls.Add(this.btnAlbumEkle);
@@ -504,7 +507,7 @@ namespace SpotifyDemo.Forms
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "AdminAnasayfa";
-            this.Text = "AdminAnasayfa";
+            this.Text = "Anasayfa";
             this.Load += new System.EventHandler(this.AdminAnasayfa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -534,6 +537,6 @@ namespace SpotifyDemo.Forms
         private System.Windows.Forms.Button btnAlbumSil;
         private System.Windows.Forms.Button btnAlbumGuncelle;
         private System.Windows.Forms.Button btnAlbumEkle;
-        private System.Windows.Forms.Button btnYenile;
+        private System.Windows.Forms.Button button1;
     }
 }

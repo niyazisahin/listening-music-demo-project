@@ -36,8 +36,6 @@ namespace SpotifyDemo.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnAdminAnasayfaDon = new System.Windows.Forms.Button();
-            this.lblPingYazi = new System.Windows.Forms.Label();
-            this.lblPing = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -52,6 +50,8 @@ namespace SpotifyDemo.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.Süre = new System.Windows.Forms.Label();
             this.Album = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,7 +61,7 @@ namespace SpotifyDemo.Forms
             // tbxSarkiAd
             // 
             this.tbxSarkiAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxSarkiAd.Location = new System.Drawing.Point(597, 95);
+            this.tbxSarkiAd.Location = new System.Drawing.Point(597, 61);
             this.tbxSarkiAd.Name = "tbxSarkiAd";
             this.tbxSarkiAd.Size = new System.Drawing.Size(207, 24);
             this.tbxSarkiAd.TabIndex = 115;
@@ -74,7 +74,7 @@ namespace SpotifyDemo.Forms
             this.btnSarkiGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSarkiGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSarkiGuncelle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.btnSarkiGuncelle.Location = new System.Drawing.Point(597, 406);
+            this.btnSarkiGuncelle.Location = new System.Drawing.Point(597, 420);
             this.btnSarkiGuncelle.Name = "btnSarkiGuncelle";
             this.btnSarkiGuncelle.Size = new System.Drawing.Size(207, 41);
             this.btnSarkiGuncelle.TabIndex = 114;
@@ -87,7 +87,7 @@ namespace SpotifyDemo.Forms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(463, 101);
+            this.label8.Location = new System.Drawing.Point(469, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 18);
             this.label8.TabIndex = 113;
@@ -129,28 +129,6 @@ namespace SpotifyDemo.Forms
             this.btnAdminAnasayfaDon.Text = "Anasayfa";
             this.btnAdminAnasayfaDon.UseVisualStyleBackColor = false;
             this.btnAdminAnasayfaDon.Click += new System.EventHandler(this.btnAdminAnasayfaDon_Click);
-            // 
-            // lblPingYazi
-            // 
-            this.lblPingYazi.AutoSize = true;
-            this.lblPingYazi.BackColor = System.Drawing.Color.Teal;
-            this.lblPingYazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPingYazi.Location = new System.Drawing.Point(2, 406);
-            this.lblPingYazi.Name = "lblPingYazi";
-            this.lblPingYazi.Size = new System.Drawing.Size(111, 20);
-            this.lblPingYazi.TabIndex = 107;
-            this.lblPingYazi.Text = "Mevcut Ping :";
-            // 
-            // lblPing
-            // 
-            this.lblPing.AutoSize = true;
-            this.lblPing.BackColor = System.Drawing.Color.Teal;
-            this.lblPing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPing.Location = new System.Drawing.Point(110, 406);
-            this.lblPing.Name = "lblPing";
-            this.lblPing.Size = new System.Drawing.Size(53, 20);
-            this.lblPing.TabIndex = 106;
-            this.lblPing.Text = "label2";
             // 
             // label1
             // 
@@ -197,7 +175,7 @@ namespace SpotifyDemo.Forms
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(597, 144);
+            this.dateTimePicker1.Location = new System.Drawing.Point(597, 198);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(207, 24);
             this.dateTimePicker1.TabIndex = 116;
@@ -206,7 +184,7 @@ namespace SpotifyDemo.Forms
             // 
             this.cmbxTur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbxTur.FormattingEnabled = true;
-            this.cmbxTur.Location = new System.Drawing.Point(597, 180);
+            this.cmbxTur.Location = new System.Drawing.Point(597, 234);
             this.cmbxTur.Name = "cmbxTur";
             this.cmbxTur.Size = new System.Drawing.Size(207, 26);
             this.cmbxTur.TabIndex = 117;
@@ -214,7 +192,7 @@ namespace SpotifyDemo.Forms
             // tbxSure
             // 
             this.tbxSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxSure.Location = new System.Drawing.Point(597, 221);
+            this.tbxSure.Location = new System.Drawing.Point(597, 275);
             this.tbxSure.Name = "tbxSure";
             this.tbxSure.Size = new System.Drawing.Size(207, 24);
             this.tbxSure.TabIndex = 118;
@@ -222,7 +200,7 @@ namespace SpotifyDemo.Forms
             // tbxDinlenmeSayisi
             // 
             this.tbxDinlenmeSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxDinlenmeSayisi.Location = new System.Drawing.Point(597, 269);
+            this.tbxDinlenmeSayisi.Location = new System.Drawing.Point(597, 323);
             this.tbxDinlenmeSayisi.Name = "tbxDinlenmeSayisi";
             this.tbxDinlenmeSayisi.Size = new System.Drawing.Size(207, 24);
             this.tbxDinlenmeSayisi.TabIndex = 119;
@@ -231,7 +209,7 @@ namespace SpotifyDemo.Forms
             // 
             this.cmbxAlbumSanatci.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbxAlbumSanatci.FormattingEnabled = true;
-            this.cmbxAlbumSanatci.Location = new System.Drawing.Point(597, 318);
+            this.cmbxAlbumSanatci.Location = new System.Drawing.Point(597, 372);
             this.cmbxAlbumSanatci.Name = "cmbxAlbumSanatci";
             this.cmbxAlbumSanatci.Size = new System.Drawing.Size(207, 26);
             this.cmbxAlbumSanatci.TabIndex = 120;
@@ -241,7 +219,7 @@ namespace SpotifyDemo.Forms
             this.Tür.AutoSize = true;
             this.Tür.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Tür.ForeColor = System.Drawing.Color.White;
-            this.Tür.Location = new System.Drawing.Point(463, 183);
+            this.Tür.Location = new System.Drawing.Point(496, 237);
             this.Tür.Name = "Tür";
             this.Tür.Size = new System.Drawing.Size(30, 18);
             this.Tür.TabIndex = 122;
@@ -252,7 +230,7 @@ namespace SpotifyDemo.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(463, 144);
+            this.label5.Location = new System.Drawing.Point(485, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 18);
             this.label5.TabIndex = 121;
@@ -263,7 +241,7 @@ namespace SpotifyDemo.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(463, 272);
+            this.label6.Location = new System.Drawing.Point(413, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 18);
             this.label6.TabIndex = 124;
@@ -274,7 +252,7 @@ namespace SpotifyDemo.Forms
             this.Süre.AutoSize = true;
             this.Süre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Süre.ForeColor = System.Drawing.Color.White;
-            this.Süre.Location = new System.Drawing.Point(463, 224);
+            this.Süre.Location = new System.Drawing.Point(449, 281);
             this.Süre.Name = "Süre";
             this.Süre.Size = new System.Drawing.Size(77, 18);
             this.Süre.TabIndex = 123;
@@ -285,11 +263,30 @@ namespace SpotifyDemo.Forms
             this.Album.AutoSize = true;
             this.Album.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Album.ForeColor = System.Drawing.Color.White;
-            this.Album.Location = new System.Drawing.Point(463, 321);
+            this.Album.Location = new System.Drawing.Point(473, 380);
             this.Album.Name = "Album";
             this.Album.Size = new System.Drawing.Size(53, 18);
             this.Album.TabIndex = 125;
             this.Album.Text = "Album ";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(598, 94);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(207, 94);
+            this.checkedListBox1.TabIndex = 127;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(469, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 18);
+            this.label3.TabIndex = 126;
+            this.label3.Text = "Sanatçı";
             // 
             // AdminSarkiGuncelleme
             // 
@@ -297,6 +294,8 @@ namespace SpotifyDemo.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(878, 487);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Album);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Süre);
@@ -313,14 +312,12 @@ namespace SpotifyDemo.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnAdminAnasayfaDon);
-            this.Controls.Add(this.lblPingYazi);
-            this.Controls.Add(this.lblPing);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AdminSarkiGuncelleme";
-            this.Text = "AdminSarkiGuncelleme";
+            this.Text = "Sanatçı Güncelle";
             this.Load += new System.EventHandler(this.AdminSarkiGuncelleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -339,8 +336,6 @@ namespace SpotifyDemo.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnAdminAnasayfaDon;
-        private System.Windows.Forms.Label lblPingYazi;
-        private System.Windows.Forms.Label lblPing;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -355,5 +350,7 @@ namespace SpotifyDemo.Forms
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Süre;
         private System.Windows.Forms.Label Album;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

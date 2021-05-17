@@ -40,8 +40,6 @@ namespace SpotifyDemo
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
-            this.lblPingYazi = new System.Windows.Forms.Label();
-            this.lblPing = new System.Windows.Forms.Label();
             this.btnGirisDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -163,30 +161,6 @@ namespace SpotifyDemo
             this.lblTarih.TabIndex = 9;
             this.lblTarih.Text = "label2";
             // 
-            // lblPingYazi
-            // 
-            this.lblPingYazi.AutoSize = true;
-            this.lblPingYazi.BackColor = System.Drawing.Color.Teal;
-            this.lblPingYazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPingYazi.Location = new System.Drawing.Point(4, 407);
-            this.lblPingYazi.Name = "lblPingYazi";
-            this.lblPingYazi.Size = new System.Drawing.Size(111, 20);
-            this.lblPingYazi.TabIndex = 18;
-            this.lblPingYazi.Text = "Mevcut Ping :";
-            this.lblPingYazi.Click += new System.EventHandler(this.lblPingYazi_Click);
-            // 
-            // lblPing
-            // 
-            this.lblPing.AutoSize = true;
-            this.lblPing.BackColor = System.Drawing.Color.Teal;
-            this.lblPing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPing.Location = new System.Drawing.Point(112, 407);
-            this.lblPing.Name = "lblPing";
-            this.lblPing.Size = new System.Drawing.Size(53, 20);
-            this.lblPing.TabIndex = 17;
-            this.lblPing.Text = "label2";
-            this.lblPing.Click += new System.EventHandler(this.lblPing_Click);
-            // 
             // btnGirisDon
             // 
             this.btnGirisDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
@@ -210,8 +184,6 @@ namespace SpotifyDemo
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(911, 538);
             this.Controls.Add(this.btnGirisDon);
-            this.Controls.Add(this.lblPingYazi);
-            this.Controls.Add(this.lblPing);
             this.Controls.Add(this.lblTarih);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -223,7 +195,7 @@ namespace SpotifyDemo
             this.Controls.Add(this.lblAdminSifre);
             this.Controls.Add(this.lblAdminAd);
             this.Name = "AdminGiris";
-            this.Text = "AdminGiris";
+            this.Text = "Admin Giriş";
             this.Load += new System.EventHandler(this.AdminGiris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -244,8 +216,6 @@ namespace SpotifyDemo
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTarih;
-        private System.Windows.Forms.Label lblPingYazi;
-        private System.Windows.Forms.Label lblPing;
         private System.Windows.Forms.Button btnGirisDon;
     }
 }

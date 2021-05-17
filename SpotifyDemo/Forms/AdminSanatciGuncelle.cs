@@ -62,6 +62,9 @@ namespace SpotifyDemo.Forms
 
         private void AdminSanatciGuncelle_Load(object sender, EventArgs e)
         {
+
+            try
+            {
             StreamReader sr = new StreamReader(dosya);
             int id = Convert.ToInt32(sr.ReadLine());
             sr.Close();
@@ -69,6 +72,19 @@ namespace SpotifyDemo.Forms
             var sanatci = sanatciService.GetByID(id);
             tbxSanatciAd.Text = sanatci.SanatciAd;
             tbxSanatciUlke.Text = sanatci.SanatciUlke;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Bir Sanatci Secmelisiniz");
+                AdminAnasayfa adminAnasayfa = new AdminAnasayfa();
+                this.Hide();
+                adminAnasayfa.ShowDialog();
+                this.Close();
+            }
+
         }
+
+
     }
 }

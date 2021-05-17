@@ -43,7 +43,7 @@ namespace SpotifyDemo.Forms
 
                 CalmaListesiOlustur(kullanici.KullaniciID, "Pop");
                 CalmaListesiOlustur(kullanici.KullaniciID, "Caz");
-                CalmaListesiOlustur(kullanici.KullaniciID, "Rock");
+                CalmaListesiOlustur(kullanici.KullaniciID, "Klasik");
 
                 MessageBox.Show("Kullanici Eklendi.");
             }

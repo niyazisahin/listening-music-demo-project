@@ -16,7 +16,7 @@ namespace SpotifyDemo
     public partial class AdminGiris : Form
     {
         ContextClass context = new ContextClass();
-        Ping p = new Ping();
+        
         public AdminGiris()
         {
             InitializeComponent();
@@ -26,6 +26,7 @@ namespace SpotifyDemo
         {
             string mail = tbxAdminAd.Text;
             string sifre = tbxAdminSifre.Text;
+            bool sayac = false;
 
             foreach (var item in context.Admins)
             {
@@ -38,16 +39,15 @@ namespace SpotifyDemo
                         this.Hide();
                         adminAnasayfa.ShowDialog();
                         this.Close();
+
+                        sayac = true;
                     }
-                    else
-                    {
-                        MessageBox.Show("Girilen Bilgiler Hatalıdır!");
-                    }
+
                 }
-                else
-                {
-                    MessageBox.Show("Girilen Bilgiler Hatalıdır!");
-                }
+            }
+            if (!sayac)
+            {
+                MessageBox.Show("Girilen Bilgiler Hatalıdır!");
             }
         }
 
@@ -56,8 +56,7 @@ namespace SpotifyDemo
             var tarih = DateTime.Now;
             lblTarih.Text = tarih.ToString();
            
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
+
         }
 
         private void btnGirisDon_Click(object sender, EventArgs e)
@@ -68,16 +67,9 @@ namespace SpotifyDemo
             this.Close();
         }
 
-        private void lblPing_Click(object sender, EventArgs e)
-        {
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
-        }
 
-        private void lblPingYazi_Click(object sender, EventArgs e)
-        {
 
-        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {

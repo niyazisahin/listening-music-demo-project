@@ -15,6 +15,23 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +51,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>9k.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E75F5AC8BD70FA59824B96ACDB039232B2BA8F0C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SpotifyDemo_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -112,11 +144,11 @@
     <Compile Include="Forms\AdminSarkiGuncelleme.Designer.cs">
       <DependentUpon>AdminSarkiGuncelleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\DigerKullaniciForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\DigerKullaniciForm.Designer.cs">
+      <DependentUpon>DigerKullaniciForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GirisEkran.cs">
       <SubType>Form</SubType>
@@ -147,18 +179,25 @@
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\CalmaListeSarkilar.cs" />
     <Compile Include="Models\CalmaListesi.cs" />
+    <Compile Include="Models\AlbumSanatciListe.cs" />
+    <Compile Include="Models\Takipler.cs" />
+    <Compile Include="Models\UlkeyeGoreDinlenmeSayisi.cs" />
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\Sanatci.cs" />
     <Compile Include="Models\Sarki.cs" />
     <Compile Include="Models\SarkiSanatcilar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AlbumSanatciListeService.cs" />
     <Compile Include="Service\AlbumService.cs" />
     <Compile Include="Service\CalmaListesiSarkilarService.cs" />
     <Compile Include="Service\CalmaListesiService.cs" />
     <Compile Include="Service\KullanıcıService.cs" />
     <Compile Include="Service\SanatciService.cs" />
+    <Compile Include="Service\SarkiSanatcilarService.cs" />
     <Compile Include="Service\SarkiService.cs" />
+    <Compile Include="Service\TakiplerService.cs" />
+    <Compile Include="Service\UlkeyeGoreDinlenmeService.cs" />
     <EmbeddedResource Include="Forms\AdminAlbumEkle.resx">
       <DependentUpon>AdminAlbumEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,14 +225,15 @@
     <EmbeddedResource Include="Forms\AdminSarkiGuncelleme.resx">
       <DependentUpon>AdminSarkiGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DigerKullaniciForm.resx">
+      <DependentUpon>DigerKullaniciForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GirisEkran.resx">
       <DependentUpon>GirisEkran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciForm.resx">
       <DependentUpon>KullaniciForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciGiris.resx">
       <DependentUpon>KullaniciGiris.cs</DependentUpon>
@@ -220,12 +260,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SpotifyDemo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="9k.ico" />
     <Content Include="TextFile\Log.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -44,6 +44,36 @@ namespace SpotifyDemo.Forms
             try
             {
                 sarkiService.Update(id, sarki);
+
+                var sarkilar = context.SarkiSanatcilars.Where(x => x.SarkiID == id).ToList();
+
+                SarkiSanatcilarService sarkiSanatcilarService = new SarkiSanatcilarService();
+
+                foreach (var item in sarkilar)
+                {
+                    sarkiSanatcilarService.Delete(item.SarkiSanatcilarID);
+                }
+
+                var sanatcilar = checkedListBox1.CheckedItems;
+
+                List<int> sanatcilarIdListe = new List<int>();
+
+                foreach (var item in sanatcilar)
+                {
+                    var sanatcilarAd = context.Sanatcis.Where(x => x.SanatciAd == item.ToString()).FirstOrDefault();
+                    sanatcilarIdListe.Add(sanatcilarAd.SanatciID);
+                }
+
+                foreach (var item in sanatcilarIdListe)
+                {
+                    SarkiSanatcilar sarkiSanatcilar = new SarkiSanatcilar();
+
+                    sarkiSanatcilar.SarkiID = id;
+                    sarkiSanatcilar.SanatciID = item;
+
+                    sarkiSanatcilarService.Add(sarkiSanatcilar);
+                }
+
             }
             catch
             {
@@ -55,25 +85,65 @@ namespace SpotifyDemo.Forms
 
         private void AdminSarkiGuncelleme_Load(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader(dosya);
-            int id = Convert.ToInt32(sr.ReadLine());
-            sr.Close();
-
-            foreach (var item in context.Albums)
+            try
             {
-                cmbxAlbumSanatci.Items.Add(item.AlbumAd);
-            }
-            cmbxTur.Items.Add("Pop");
-            cmbxTur.Items.Add("Caz");
-            cmbxTur.Items.Add("Rock");
+                StreamReader sr = new StreamReader(dosya);
+                int id = Convert.ToInt32(sr.ReadLine());
+                sr.Close();
 
-            var sarki = sarkiService.GetByID(id);
-            tbxSarkiAd.Text = sarki.SarkiAd;
-            tbxDinlenmeSayisi.Text = sarki.SarkiDinlenmeSayisi.ToString();
-            tbxSure.Text = sarki.SarkiSure.ToString();
-            cmbxTur.SelectedItem = sarki.SarkiTur;
-            cmbxAlbumSanatci.SelectedItem = context.Albums.Where(x => x.AlbumID == sarki.AlbumID).Select(y => y.AlbumAd).FirstOrDefault();
-            dateTimePicker1.Value = sarki.SarkiTarih;
+                var sanatciListe = context.Sanatcis.ToList();
+                var sanatcilarId = context.SarkiSanatcilars.Where(x => x.SarkiID == id).Select(y => y.SanatciID).ToList();
+
+                foreach (var item in sanatciListe)
+                {
+                    checkedListBox1.Items.Add(item.SanatciAd);
+                }
+
+                List<string> sanatcilarAd = new List<string>();
+                foreach (var item in sanatcilarId)
+                {
+                    var sanatci = context.Sanatcis.Where(x => x.SanatciID == item).FirstOrDefault();
+                    var sanatciAd = sanatci.SanatciAd;
+
+                    sanatcilarAd.Add(sanatciAd);
+
+                }
+
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    if (sanatcilarAd.Contains(checkedListBox1.Items[i].ToString()))
+                    {
+                        checkedListBox1.SetItemChecked(i, true);
+                    }
+                }
+
+
+
+                foreach (var item in context.Albums)
+                {
+                    cmbxAlbumSanatci.Items.Add(item.AlbumAd);
+                }
+                cmbxTur.Items.Add("Pop");
+                cmbxTur.Items.Add("Caz");
+                cmbxTur.Items.Add("Klasik");
+
+                var sarki = sarkiService.GetByID(id);
+                tbxSarkiAd.Text = sarki.SarkiAd;
+                tbxDinlenmeSayisi.Text = sarki.SarkiDinlenmeSayisi.ToString();
+                tbxSure.Text = sarki.SarkiSure.ToString();
+                cmbxTur.SelectedItem = sarki.SarkiTur;
+                cmbxAlbumSanatci.SelectedItem = context.Albums.Where(x => x.AlbumID == sarki.AlbumID).Select(y => y.AlbumAd).FirstOrDefault();
+                dateTimePicker1.Value = sarki.SarkiTarih;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Bir Sarki Seciniz.");
+                AdminAnasayfa adminAnasayfa = new AdminAnasayfa();
+                this.Hide();
+                adminAnasayfa.ShowDialog();
+                this.Close();
+            }
             
         }
 

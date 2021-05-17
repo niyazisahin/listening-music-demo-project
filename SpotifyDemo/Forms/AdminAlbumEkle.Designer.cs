@@ -37,13 +37,11 @@ namespace SpotifyDemo.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnAdminAnasayfaDon = new System.Windows.Forms.Button();
-            this.lblPingYazi = new System.Windows.Forms.Label();
-            this.lblPing = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbbxAlbumSanatci = new System.Windows.Forms.ComboBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,7 +69,7 @@ namespace SpotifyDemo.Forms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(441, 197);
+            this.label8.Location = new System.Drawing.Point(422, 118);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 18);
             this.label8.TabIndex = 83;
@@ -82,7 +80,7 @@ namespace SpotifyDemo.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(454, 148);
+            this.label3.Location = new System.Drawing.Point(454, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 18);
             this.label3.TabIndex = 82;
@@ -91,7 +89,7 @@ namespace SpotifyDemo.Forms
             // tbxAlbumAd
             // 
             this.tbxAlbumAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxAlbumAd.Location = new System.Drawing.Point(597, 142);
+            this.tbxAlbumAd.Location = new System.Drawing.Point(597, 79);
             this.tbxAlbumAd.Name = "tbxAlbumAd";
             this.tbxAlbumAd.Size = new System.Drawing.Size(207, 24);
             this.tbxAlbumAd.TabIndex = 81;
@@ -132,30 +130,6 @@ namespace SpotifyDemo.Forms
             this.btnAdminAnasayfaDon.Text = "Anasayfa";
             this.btnAdminAnasayfaDon.UseVisualStyleBackColor = false;
             this.btnAdminAnasayfaDon.Click += new System.EventHandler(this.btnAdminAnasayfaDon_Click);
-            // 
-            // lblPingYazi
-            // 
-            this.lblPingYazi.AutoSize = true;
-            this.lblPingYazi.BackColor = System.Drawing.Color.Teal;
-            this.lblPingYazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPingYazi.Location = new System.Drawing.Point(2, 407);
-            this.lblPingYazi.Name = "lblPingYazi";
-            this.lblPingYazi.Size = new System.Drawing.Size(111, 20);
-            this.lblPingYazi.TabIndex = 77;
-            this.lblPingYazi.Text = "Mevcut Ping :";
-            this.lblPingYazi.Click += new System.EventHandler(this.lblPingYazi_Click);
-            // 
-            // lblPing
-            // 
-            this.lblPing.AutoSize = true;
-            this.lblPing.BackColor = System.Drawing.Color.Teal;
-            this.lblPing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPing.Location = new System.Drawing.Point(110, 407);
-            this.lblPing.Name = "lblPing";
-            this.lblPing.Size = new System.Drawing.Size(53, 20);
-            this.lblPing.TabIndex = 76;
-            this.lblPing.Text = "label2";
-            this.lblPing.Click += new System.EventHandler(this.lblPing_Click);
             // 
             // label1
             // 
@@ -199,14 +173,13 @@ namespace SpotifyDemo.Forms
             this.pictureBox1.TabIndex = 72;
             this.pictureBox1.TabStop = false;
             // 
-            // cmbbxAlbumSanatci
+            // checkedListBox1
             // 
-            this.cmbbxAlbumSanatci.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbbxAlbumSanatci.FormattingEnabled = true;
-            this.cmbbxAlbumSanatci.Location = new System.Drawing.Point(597, 198);
-            this.cmbbxAlbumSanatci.Name = "cmbbxAlbumSanatci";
-            this.cmbbxAlbumSanatci.Size = new System.Drawing.Size(207, 26);
-            this.cmbbxAlbumSanatci.TabIndex = 85;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(600, 118);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(204, 139);
+            this.checkedListBox1.TabIndex = 86;
             // 
             // AdminAlbumEkle
             // 
@@ -214,7 +187,7 @@ namespace SpotifyDemo.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(911, 545);
-            this.Controls.Add(this.cmbbxAlbumSanatci);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.btnAlbumEkle);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
@@ -222,14 +195,12 @@ namespace SpotifyDemo.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnAdminAnasayfaDon);
-            this.Controls.Add(this.lblPingYazi);
-            this.Controls.Add(this.lblPing);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AdminAlbumEkle";
-            this.Text = "AdminAlbumEkle";
+            this.Text = "Album Ekle";
             this.Load += new System.EventHandler(this.AdminAlbumEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -248,12 +219,10 @@ namespace SpotifyDemo.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnAdminAnasayfaDon;
-        private System.Windows.Forms.Label lblPingYazi;
-        private System.Windows.Forms.Label lblPing;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbbxAlbumSanatci;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

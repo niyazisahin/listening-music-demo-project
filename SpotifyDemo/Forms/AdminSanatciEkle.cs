@@ -17,7 +17,6 @@ namespace SpotifyDemo.Forms
     public partial class AdminSanatciEkle : Form
     {
 
-        Ping p = new Ping();
         ContextClass context = new ContextClass();
         SanatciService service = new SanatciService();
 
@@ -34,17 +33,6 @@ namespace SpotifyDemo.Forms
             this.Close();
         }
 
-        private void lblPing_Click(object sender, EventArgs e)
-        {
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
-        }
-
-        private void lblPingYazi_Click(object sender, EventArgs e)
-        {
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
-        }
 
         private void btnSanatciEkle_Click(object sender, EventArgs e)
         {
@@ -62,6 +50,11 @@ namespace SpotifyDemo.Forms
                 MessageBox.Show("Sanatci Eklenemedi");
             }
             MessageBox.Show("Sanatci Eklendi");
+        }
+
+        private void AdminSanatciEkle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

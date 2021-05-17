@@ -94,72 +94,50 @@ namespace SpotifyDemo.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            sarkiService.Delete(id);
+            
+            try
+            {
+                var id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                sarkiService.Delete(id);
+            }
+            catch
+            {
+                MessageBox.Show("Sarki silinirken bir sorunla karsilasildi.");
+            }
+            
 
         } //Sarki Sil.
 
         private void btnSanatciSil_Click(object sender, EventArgs e)
         {
-            var id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
 
-            var albumKontrol = context.Albums.Where(x => x.AlbumSanatciID == id).FirstOrDefault();
-            var sarkiKontrol = context.SarkiSanatcilars.Where(x => x.SanatciID == id).FirstOrDefault();
-
-            if (albumKontrol == null)
+            try
             {
-                Console.WriteLine("Sanatcinin albumu yok");
-                if (sarkiKontrol == null)
-                {
-                    Console.WriteLine("Sanatcinin sarkisi yok");
-
-                    try
-                    {
-                        sanatciService.Delete(id);
-                    }
-                    catch
-                    {
-
-                        MessageBox.Show("Sanatci silinemedi");
-                    }
-
-                    Console.WriteLine("Sanatci silindi");
-
-                }
-
+                var id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                sanatciService.Delete(id);
             }
-            else
+            catch
             {
-                MessageBox.Show("Sanatcinin mevcut albumu var.");
+                MessageBox.Show("Sanatci silinirken bir sorunla karsilasildi.");
             }
-
 
         }
 
         private void btnAlbumSil_Click(object sender, EventArgs e)
         {
-            var id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
 
-            var sarkiKontrol = context.Sarkis.Where(x => x.AlbumID == id).FirstOrDefault();
-            if (sarkiKontrol == null)
+            try
             {
-                Console.WriteLine("Albumun sarkisi yok");
-
-                try
-                {
-                    albumService.Delete(id);
-                }
-                catch
-                {
-
-                    MessageBox.Show("Album silinemedi");
-                }
-                MessageBox.Show("Album Silindi");
+                var id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                albumService.Delete(id);
             }
-            else
+            catch
             {
-                MessageBox.Show("Albume ait sarki var.");
+                MessageBox.Show("Album silinirken bir sorunla karsilasildi.");
             }
+
 
 
         }
@@ -197,6 +175,11 @@ namespace SpotifyDemo.Forms
             this.Hide();
             adminSarkiGuncelleme.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

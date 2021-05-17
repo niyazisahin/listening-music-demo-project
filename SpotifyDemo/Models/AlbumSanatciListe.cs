@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace SpotifyDemo.Models
 {
-    class SarkiSanatcilar
+    class AlbumSanatciListe
     {
-        [DisplayName("ID")]
-        public int SarkiSanatcilarID { get; set; }
 
-        [DisplayName("Şarkı")]
-        public int SarkiID { get; set; }
+        [DisplayName("ID")]
+        public int AlbumSanatciListeID { get; set; }
+
+        [DisplayName("Albüm")]
+        public int AlbumID { get; set; }
 
         [DisplayName("Sanatçı")]
         public int SanatciID { get; set; }

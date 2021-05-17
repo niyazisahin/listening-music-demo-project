@@ -17,7 +17,7 @@ namespace SpotifyDemo
     public partial class KullaniciGiris : Form
     {
         ContextClass context = new ContextClass();
-        Ping p = new Ping();
+        
         public KullaniciGiris()
         {
 
@@ -30,9 +30,6 @@ namespace SpotifyDemo
             var tarih = DateTime.Now;
             lblTarih.Text = tarih.ToString();
 
-            
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
         }
 
         private void btnKullanici_Click_1(object sender, EventArgs e)
@@ -74,11 +71,7 @@ namespace SpotifyDemo
 
         }
 
-        private void lblPing_Click(object sender, EventArgs e)
-        {
-            PingReply rep = p.Send("www.google.com");
-            lblPing.Text = (rep.RoundtripTime.ToString());
-        }
+
 
         private void btnGirisDon_Click(object sender, EventArgs e)
         {

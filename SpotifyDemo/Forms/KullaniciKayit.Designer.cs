@@ -248,7 +248,7 @@ namespace SpotifyDemo.Forms
             this.Controls.Add(this.lblAdminSifre);
             this.Controls.Add(this.lblAdminAd);
             this.Name = "KullaniciKayit";
-            this.Text = "KullaniciKayit";
+            this.Text = "Kullanıcı Kayıt";
             this.Load += new System.EventHandler(this.KullaniciKayit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
