@@ -236,33 +236,35 @@ namespace SpotifyDemo.Forms
             UlkeyeGoreDinlenmeSayisi ulkeyeGoreDinlenmeSayisi = new UlkeyeGoreDinlenmeSayisi();
 
             var sarkiId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            
             var ulke = context.Kullanicis.Where(x => x.KullaniciID == _id).Select(y => y.KullaniciUlke).FirstOrDefault();
 
             var sarki = context.Sarkis.Where(x => x.SarkiID == sarkiId).FirstOrDefault();
 
             sarki.SarkiDinlenmeSayisi++;
+            context.SaveChanges();
 
-            var ulkeVarMi = context.UlkeyeGoreDinlenmeSayisis.Where(x => x.UlkeAd == ulke).FirstOrDefault(); 
-            var sarkiVarMi = context.UlkeyeGoreDinlenmeSayisis.Where(x => x.SarkiID == sarkiId).FirstOrDefault();
-
-            if (ulkeVarMi != null && sarkiVarMi != null)
+            var ulkeVarMi = context.UlkeyeGoreDinlenmeSayisis.Where(x => x.UlkeAd == ulke && x.SarkiID == sarkiId).FirstOrDefault(); 
+            
+            if (ulkeVarMi != null)
             {
-                var entity = context.UlkeyeGoreDinlenmeSayisis.Where(x => x.SarkiID == sarkiId).FirstOrDefault();
+               
+                var entity = context.UlkeyeGoreDinlenmeSayisis.Where(x => x.SarkiID == sarkiId && x.UlkeAd == ulke).FirstOrDefault();
 
                 entity.DinlenmeSayisi++;
-                ulkeyeGoreDinlenmeSayisi.DinlenmeSayisi++;
-                context.SaveChanges();
+
+                ulkeService.Update(entity.UlkeyeGoreDinlenmeSayisiID, entity);
             }
             else
             {
+                Console.WriteLine("else e girdim");
+
                 ulkeyeGoreDinlenmeSayisi.SarkiID = sarkiId;
                 ulkeyeGoreDinlenmeSayisi.UlkeAd = ulke;
                 ulkeyeGoreDinlenmeSayisi.DinlenmeSayisi = 1;
 
                 ulkeService.Add(ulkeyeGoreDinlenmeSayisi);
             }
-
-
 
         }
 
